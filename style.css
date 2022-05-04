@@ -1,0 +1,15 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.day-one {
+    background-color: royalblue;
+}
+
+.day-two {
+    background-color: blueviolet;
+}
+
+.day-three {
+    background-color: aqua;
+}
