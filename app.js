@@ -1,6 +1,13 @@
-Vue.component("my-table", {
-
+Vue.component("event-component", {
     props: {
+            tittle: {
+                type: String,
+                required: true,
+            },
+            description: {
+                type: String,
+                required: true,
+            },
             participants: {
                 type: Array,
                 required: true,
@@ -10,9 +17,10 @@ Vue.component("my-table", {
                 required: true,
             },
     },
-
     template:
-        `<div>
+        `<div :class="styles">
+            <h3>{{tittle}}</h3>
+            <p>{{description}}</p>
             <table>
                 <thead>
                     <tr>
@@ -29,15 +37,14 @@ Vue.component("my-table", {
                 </tbody>
             </table>
         </div>`
-
 });
 
 var app = new Vue({
-
     el: "#app",
-
     data: {
         one: {
+            tittle: "Día 1",
+            description: "Visita a empresas de la ciudad",
             participants: [
                 {name: "Juan", surname: "González", organisation: "CCIRR", arrival: new Date("2022/05/05").toLocaleDateString()},
                 {name: "José", surname: "Dellepiane", organisation: "CICAE", arrival: new Date("2022/05/05").toLocaleDateString()},
@@ -48,6 +55,8 @@ var app = new Vue({
             styles: "day-one",
         },
         two: {
+            tittle: "Día 2",
+            description: "Encuentro de jóvenes empresarios",
             participants: [
                 {name: "Mariano", surname: "Lufiego", organisation: "UIA", arrival: new Date("2022/05/05").toLocaleDateString()},
                 {name: "Laura", surname: "Tapia", organisation: "FISFE", arrival: new Date("2022/05/05").toLocaleDateString()},
@@ -58,6 +67,8 @@ var app = new Vue({
             styles: "day-two",
         },
         three: {
+            tittle: "Día 3",
+            description: "Charla debate sobre actualidad industrial",
             participants: [
                 {name: "Mariana", surname: "Lombardo", organisation: "CICAE", arrival: new Date("2022/05/07").toLocaleDateString()},
                 {name: "Guillermina", surname: "Fernández", organisation: "CICAE", arrival: new Date("2022/05/07").toLocaleDateString()},
@@ -68,11 +79,4 @@ var app = new Vue({
             styles: "day-three",
         },
     },
-
-    // ¿Cómo hago que esto sea dinámico?
-    methods: {
-        styling() {
-            return this.one.styles
-        }
-    }
 });

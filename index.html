@@ -11,18 +11,11 @@
 </head>
 <body>
     <div id="app">
-        <div>
-            <h2>Día 1</h2>
-            <my-table :participants="one.participants" :styles="one.styles" :class="styling()"></my-table>
-        </div>
-        <div>
-            <h2>Día 2</h2>
-            <my-table :participants="two.participants" :styles="two.styles" ></my-table>
-        </div>
-        <div>
-            <h2>Día 3</h2>
-            <my-table :participants="three.participants" :styles="three.styles"></my-table>
-        </div>
+        <h1>Junta Federal de Jóvenes Industriales Argentinos</h1>
+        <h2>Autoridades destacadas</h2>
+        <event-component :tittle="one.tittle" :description="one.description" :participants="one.participants" :styles="one.styles"></event-component>
+        <event-component :tittle="two.tittle" :description="two.description" :participants="two.participants" :styles="two.styles"></event-component>
+        <event-component :tittle="three.tittle" :description="three.description" :participants="three.participants" :styles="three.styles"></event-component>
     </div>
 </body>
 </html>

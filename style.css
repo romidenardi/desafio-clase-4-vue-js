@@ -2,14 +2,78 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.day-one {
-    background-color: royalblue;
+#app {
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
-.day-two {
-    background-color: blueviolet;
+h1 {
+    font-size: 22px;
 }
 
-.day-three {
-    background-color: aqua;
+h2 {
+    font-size: 20px;
 }
+
+p {
+    font-size: 16px;
+}
+
+table {
+    margin: 5px;
+    padding: 5px;
+}
+
+thead tr th {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+tbody tr th {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 5px;
+}
+
+.day-one h3 {
+    color: rgb(98, 2, 193);
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+.day-one table {
+    background-color: rgba(98, 2, 193, 0.15);
+}
+
+.day-one thead tr th {
+    color: rgb(98, 2, 193);
+} 
+
+.day-two h3 {
+    color: rgb(42, 99, 156);
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+.day-two table {
+    background-color: rgba(42, 99, 156, 0.15);
+}
+
+.day-two thead tr th {
+    color: rgb(42, 99, 156);
+} 
+
+.day-three h3 {
+    color: rgb(0, 171, 123);
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+.day-three table {
+    background-color: rgba(0, 171, 123, 0.15);
+}
+
+.day-three thead tr th {
+    color: rgb(0, 171, 123);
+} 
